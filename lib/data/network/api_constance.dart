@@ -10,8 +10,8 @@ class ApiConstance {
 
   static String imageUrl({
     required String imageKey,
-    required double width,
-    required double height,
+    double width = 0,
+    double height = 0,
   }) =>
       '$baseImageUrl/$imageKey?tr=w-$width,h-$height';
 

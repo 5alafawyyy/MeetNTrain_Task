@@ -5,7 +5,7 @@ import 'package:meet_n_train_task/presentation/resources/values_manager.dart';
 AppBar customAppBar({required String title}) {
   return AppBar(
     leading: Container(
-      margin: const EdgeInsets.all(AppMargin.m4),
+      margin: const EdgeInsets.all(AppMargin.m6),
       decoration: BoxDecoration(
         border: Border.all(
           color: ColorManager.black,
