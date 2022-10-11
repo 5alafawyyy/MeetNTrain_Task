@@ -18,7 +18,7 @@ class EventsScreen extends StatelessWidget {
         appBar: customAppBar(
           title: AppStrings.schedule,
         ),
-        body: const EventsBody(),
+        body: EventsBody(),
       ),
     );
   }

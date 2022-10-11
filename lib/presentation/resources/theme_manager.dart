@@ -72,15 +72,15 @@ ThemeData getApplicationTheme() {
 
       displayLarge: getBoldStyle(
         color: ColorManager.black,
-        fontSize: FontSizeManager.s50.sp,
+        fontSize: FontSizeManager.s36.sp,
       ),
       displayMedium: getRegularStyle(
-        color: ColorManager.grey,
-        fontSize: FontSizeManager.s45.sp,
+        color: ColorManager.black,
+        fontSize: FontSizeManager.s30.sp,
       ),
       displaySmall: getRegularStyle(
-        color: ColorManager.grey,
-        fontSize: FontSizeManager.s36.sp,
+        color: ColorManager.black,
+        fontSize: FontSizeManager.s18.sp,
       ),
 
       // HEADLINE REGULAR
@@ -102,7 +102,7 @@ ThemeData getApplicationTheme() {
         color: ColorManager.secondary,
         fontSize: FontSizeManager.s22.sp,
       ),
-      titleMedium: getMediumStyle(
+      titleMedium: getRegularStyle(
         color: ColorManager.grey,
         fontSize: FontSizeManager.s16.sp,
       ),

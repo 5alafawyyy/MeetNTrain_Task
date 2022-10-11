@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:grouped_list/grouped_list.dart';
+import 'package:intl/intl.dart';
 import 'package:meet_n_train_task/app/enums.dart';
 import 'package:meet_n_train_task/presentation/controllers/events_bloc.dart';
 import 'package:meet_n_train_task/presentation/controllers/events_state.dart';
+import 'package:meet_n_train_task/presentation/resources/color_manager.dart';
+import 'package:meet_n_train_task/presentation/resources/values_manager.dart';
 import 'package:meet_n_train_task/presentation/screens/events/widgets/event_card.dart';
 
 class EventsBody extends StatelessWidget {
-  const EventsBody({Key? key}) : super(key: key);
-
+  EventsBody({Key? key}) : super(key: key);
+  final ScrollController? controller = ScrollController();
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<EventsBloc, EventsState>(
@@ -18,15 +22,55 @@ class EventsBody extends StatelessWidget {
               child: CircularProgressIndicator.adaptive(),
             );
           case RequestState.success:
-            return ListView.separated(
-              itemBuilder: ((context, index) {
+            return GroupedListView(
+              physics: const BouncingScrollPhysics(),
+              controller: controller,
+              elements: state.events,
+              groupBy: (element) => element.date,
+              groupSeparatorBuilder: (value) {
+                String day = DateFormat('dd').format(
+                  DateTime.parse(value!),
+                );
+                String dayStr = DateFormat('EEEE').format(
+                  DateTime.parse(value),
+                );
+                String mYear = DateFormat('MMM y').format(
+                  DateTime.parse(value),
+                );
+
+                return Container(
+                  width: double.infinity,
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: AppPadding.p16),
+                  color: Colors.white,
+                  child: Row(children: [
+                    Text(
+                      day,
+                      style: Theme.of(context).textTheme.displayLarge,
+                      textScaleFactor: 1.5,
+                    ),
+                    const SizedBox(
+                      width: AppSize.s10,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(dayStr,
+                            style: Theme.of(context).textTheme.titleMedium!),
+                        Text(mYear,
+                            style: Theme.of(context).textTheme.displaySmall!),
+                      ],
+                    ),
+                  ]),
+                );
+              },
+              useStickyGroupSeparators: true,
+              indexedItemBuilder: ((context, element, index) {
                 return CustomEventCard(data: state.events[index]);
               }),
-              separatorBuilder: ((context, index) => const SizedBox(
-                    height: 10.0,
-                  )),
-              itemCount: state.events.length,
             );
+
           case RequestState.failure:
             return Center(child: Text(state.eventsMessage));
         }
@@ -34,3 +78,18 @@ class EventsBody extends StatelessWidget {
     );
   }
 }
+
+
+// return ListView.separated(
+//               itemBuilder: ((context, index) {
+//                 return CustomEventCard(data: state.events[index]);
+//               }),
+//               separatorBuilder: ((context, index) => const SizedBox(
+//                     height: 10.0,
+//                   )),
+//               itemCount: state.events.length,
+//             );
+
+// String date = DateFormat(AppStrings.verticalDateFormat).format(
+//                   DateTime.parse(value!),
+//                 );

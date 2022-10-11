@@ -12,5 +12,5 @@ class AppStrings {
   static const String free = 'Free';
   static const String daysLeft = 'Days left';
   static const String myDateFormat = 'EEEE, dd MMM y . hh:mm aaa';
-  
+  static const String verticalDateFormat = 'dd EE';
 }
