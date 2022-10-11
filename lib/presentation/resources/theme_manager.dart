@@ -20,8 +20,8 @@ ThemeData getApplicationTheme() {
     ),
 
     // Icon Theme
-    iconTheme: const IconThemeData(
-      size: FontSizeManager.s24,
+    iconTheme: IconThemeData(
+      size: FontSizeManager.s24.sp,
       color: ColorManager.secondary,
     ),
 
@@ -60,8 +60,8 @@ ThemeData getApplicationTheme() {
       ),
 
       // Icon Theme AppBar
-      iconTheme: IconThemeData(
-        size: FontSizeManager.s25.sp,
+      iconTheme: const IconThemeData(
+        size: FontSizeManager.s25,
         color: ColorManager.black,
       ),
     ),

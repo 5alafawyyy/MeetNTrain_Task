@@ -19,10 +19,10 @@ class CustomCircleAvatar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CircleAvatar(
-      radius: radius1.r,
+      radius: radius1.w,
       backgroundColor: ColorManager.white,
       child: CircleAvatar(
-        radius: radius2.r,
+        radius: radius2.w,
         backgroundImage: NetworkImage(
           ApiConstance.imageUrl(
             imageKey: imageKey,

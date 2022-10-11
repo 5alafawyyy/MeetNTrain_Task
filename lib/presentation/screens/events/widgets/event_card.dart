@@ -40,7 +40,7 @@ class CustomEventCard extends StatelessWidget {
   SizedBox _cardHeader({required BuildContext context}) {
     return SizedBox(
       width: double.infinity,
-      height: 0.3.sh,
+      height: 0.5.sw,
       child: Stack(
         fit: StackFit.expand,
         children: [

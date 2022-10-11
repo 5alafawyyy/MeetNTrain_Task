@@ -16,8 +16,10 @@ AppBar customAppBar({required String title}) {
           ),
         ),
       ),
-      child: const Icon(
-        Icons.arrow_back,
+      child: const Center(
+        child: Icon(
+          Icons.arrow_back,
+        ),
       ),
     ),
     title: Text(

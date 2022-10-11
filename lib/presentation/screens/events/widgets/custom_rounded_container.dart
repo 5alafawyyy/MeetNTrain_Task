@@ -15,7 +15,7 @@ class CustomRoundedContainer extends StatelessWidget {
       decoration: const BoxDecoration(
         color: ColorManager.lightGrey,
         borderRadius: BorderRadius.all(
-          Radius.circular(AppSize.s25),
+          Radius.circular(AppSize.s50),
         ),
       ),
       child: Center(
