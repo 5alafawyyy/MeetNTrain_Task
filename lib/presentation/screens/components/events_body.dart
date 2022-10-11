@@ -5,7 +5,6 @@ import 'package:intl/intl.dart';
 import 'package:meet_n_train_task/app/enums.dart';
 import 'package:meet_n_train_task/presentation/controllers/events_bloc.dart';
 import 'package:meet_n_train_task/presentation/controllers/events_state.dart';
-import 'package:meet_n_train_task/presentation/resources/color_manager.dart';
 import 'package:meet_n_train_task/presentation/resources/values_manager.dart';
 import 'package:meet_n_train_task/presentation/screens/events/widgets/event_card.dart';
 
@@ -93,3 +92,22 @@ class EventsBody extends StatelessWidget {
 // String date = DateFormat(AppStrings.verticalDateFormat).format(
 //                   DateTime.parse(value!),
 //                 );
+
+/**
+ * return Timeline.builder(
+              primary: true,
+              position: TimelinePosition.Left,
+              lineColor: ColorManager.grey,
+              lineWidth: AppSize.s1,
+              itemBuilder: ((context, index) {
+                return TimelineModel(
+                  CustomEventCard(data: state.events[index]),
+                  icon: Icon(Icons.receipt, color: Colors.white),
+                  iconBackground: ColorManager.primary,
+                  isLast: true,
+                );
+              }),
+              itemCount: state.events.length,
+            );
+
+ */
