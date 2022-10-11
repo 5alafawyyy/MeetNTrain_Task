@@ -1,25 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:meet_n_train_task/core/error/dio_helper.dart';
-import 'package:meet_n_train_task/core/services/services_locator.dart';
-import 'package:meet_n_train_task/events/presentation/screens/home.dart';
+import 'package:flutter/services.dart';
+import 'package:meet_n_train_task/app/app.dart';
+import 'package:meet_n_train_task/data/error/dio_helper.dart';
+import 'package:meet_n_train_task/app/services_locator.dart';
 
 void main() async {
+  // Initialize Dio Helper
   await DioHelper.init();
+
+  // Initialize Services Locator
   ServicesLocator().init();
-  runApp(const MyApp());
-}
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'MeetNTrain Task',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const HomeScreen(),
-    );
-  }
+  // For Portrait Only
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
+      .then((_) {
+    runApp(MyApp());
+  });
 }
