@@ -5,11 +5,11 @@ import 'package:meet_n_train_task/domain/entities/event.dart';
 import 'package:meet_n_train_task/presentation/resources/strings_manager.dart';
 import 'package:meet_n_train_task/presentation/resources/values_manager.dart';
 import 'package:intl/intl.dart';
-import 'package:meet_n_train_task/presentation/screens/events/widgets/custom_circle_avatar.dart';
-import 'package:meet_n_train_task/presentation/screens/events/widgets/custom_rounded_container.dart';
-import 'package:meet_n_train_task/presentation/screens/events/widgets/overlapping_circle_avatars.dart';
-import 'package:meet_n_train_task/presentation/screens/events/widgets/payment_part.dart';
+import 'package:meet_n_train_task/presentation/screens/events/view/widgets/custom_circle_avatar.dart';
+import 'package:meet_n_train_task/presentation/screens/events/view/widgets/custom_rounded_container.dart';
 import 'package:meet_n_train_task/app/extensions.dart';
+import 'package:meet_n_train_task/presentation/screens/events/view/widgets/overlapping_circle_avatars.dart';
+import 'package:meet_n_train_task/presentation/screens/events/view/widgets/payment_part.dart';
 
 class CustomEventCard extends StatelessWidget {
   const CustomEventCard({super.key, required this.data});

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:meet_n_train_task/app/app.dart';
-import 'package:meet_n_train_task/data/error/dio_helper.dart';
 import 'package:meet_n_train_task/app/services_locator.dart';
+import 'package:meet_n_train_task/data/network/dio_helper.dart';
 
 void main() async {
   // Initialize Dio Helper

@@ -2,8 +2,8 @@ import 'dart:async';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meet_n_train_task/app/enums.dart';
 import 'package:meet_n_train_task/domain/usecases/get_events_usecase.dart';
-import 'package:meet_n_train_task/presentation/controllers/events_event.dart';
-import 'package:meet_n_train_task/presentation/controllers/events_state.dart';
+import 'package:meet_n_train_task/presentation/screens/events/event_bloc/events_event.dart';
+import 'package:meet_n_train_task/presentation/screens/events/event_bloc/events_state.dart';
 
 class EventsBloc extends Bloc<EventsEvent, EventsState> {
   final GetEventsUseCase getEventsUseCase;

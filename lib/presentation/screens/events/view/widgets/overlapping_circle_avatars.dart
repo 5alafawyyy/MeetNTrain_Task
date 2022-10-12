@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meet_n_train_task/presentation/resources/values_manager.dart';
-import 'package:meet_n_train_task/presentation/screens/events/widgets/custom_circle_avatar.dart';
+import 'package:meet_n_train_task/presentation/screens/events/view/widgets/custom_circle_avatar.dart';
 
 class OverlappingCircleAvatar extends StatelessWidget {
   const OverlappingCircleAvatar({super.key, required this.images});

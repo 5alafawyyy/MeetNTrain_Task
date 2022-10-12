@@ -3,10 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:grouped_list/grouped_list.dart';
 import 'package:intl/intl.dart';
 import 'package:meet_n_train_task/app/enums.dart';
-import 'package:meet_n_train_task/presentation/controllers/events_bloc.dart';
-import 'package:meet_n_train_task/presentation/controllers/events_state.dart';
+import 'package:meet_n_train_task/presentation/screens/events/view/widgets/event_card.dart';
+import 'package:meet_n_train_task/presentation/screens/events/event_bloc/events_bloc.dart';
+import 'package:meet_n_train_task/presentation/screens/events/event_bloc/events_state.dart';
 import 'package:meet_n_train_task/presentation/resources/values_manager.dart';
-import 'package:meet_n_train_task/presentation/screens/events/widgets/event_card.dart';
 
 class EventsBody extends StatelessWidget {
   EventsBody({Key? key}) : super(key: key);

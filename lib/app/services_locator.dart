@@ -3,7 +3,7 @@ import 'package:meet_n_train_task/data/datasource/event_data_source.dart';
 import 'package:meet_n_train_task/data/repository/events_repository.dart';
 import 'package:meet_n_train_task/domain/repository/base_events_repository.dart';
 import 'package:meet_n_train_task/domain/usecases/get_events_usecase.dart';
-import 'package:meet_n_train_task/presentation/controllers/events_bloc.dart';
+import 'package:meet_n_train_task/presentation/screens/events/event_bloc/events_bloc.dart';
 
 
 final sl = GetIt.instance;

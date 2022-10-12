@@ -1,6 +1,6 @@
-import 'package:meet_n_train_task/data/error/dio_helper.dart';
 import 'package:meet_n_train_task/data/error/exceptions.dart';
 import 'package:meet_n_train_task/data/network/api_constance.dart';
+import 'package:meet_n_train_task/data/network/dio_helper.dart';
 import 'package:meet_n_train_task/data/network/error_message_model.dart';
 import 'package:meet_n_train_task/data/models/event_model.dart';
 
